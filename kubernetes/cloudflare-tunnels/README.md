@@ -2,6 +2,9 @@
 
 Credit to: [Kubecraft Community](https://www.skool.com/kubecraft)
 
+
+I built the following for my linkding (shortened to `ld`) service. 
+
 ## Install local client
 
 Install cloudflare locally: 
