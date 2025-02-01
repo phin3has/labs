@@ -2,12 +2,22 @@
 
 Credit to: [Kubecraft Community](https://www.skool.com/kubecraft)
 
+## Install local client
+
 Install cloudflare locally: 
 ```
 brew install Cloudflared
 
 ```
 More install options: https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/downloads/
+
+## Tunnel config
+
+Run the below command to build your tunnel: 
+
+```bash
+cloudflared tunnel create ldpi
+```
 
 ## K8s
 
