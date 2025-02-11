@@ -1,4 +1,4 @@
-# Cloudflare Tunnels - The GitOps > [!WARNING]
+# Cloudflare Tunnels - The GitOps way
 
 Credit to: [Kubecraft Community](https://www.skool.com/kubecraft)
 
@@ -13,6 +13,12 @@ brew install Cloudflared
 
 ```
 More install options: https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/downloads/
+
+### Login
+```
+cloudlfared Login
+```
+
 
 ## Tunnel config
 
