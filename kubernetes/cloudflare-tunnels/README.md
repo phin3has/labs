@@ -25,14 +25,24 @@ cloudlfared Login
 Run the below command to build your tunnel: 
 
 ```bash
-cloudflared tunnel create ldpi
+cloudflared tunnel create ld
 ```
+This will create a file like `~/.cloudflared/b7449f90-901c-4aa2-a438-3cdce6781d01.json`
 
 ## K8s
 
 Cloudflare provides a [config file for running CloudFlare Tunnels](https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/deploy-tunnels/deployment-guides/kubernetes/),  but their default option is to hardcode the tunnel token, which is not GitOps friendly. 
 
 Fear not, we can build this out with a configmap and using secrets. 
+
+
+### Push the secret: 
+We need to develop the "credentials.json" file w/K8s secret: 
+
+```
+kubectl create secret generic ld-tunnel-credentials \
+--from-file=credentials.json=b7449f90-901c-4aa2-a438-3cdce6781d01.json  --dry-run=client -o yaml > cloudflare.yaml
+```
 ```yaml
 apiVersion: apps/v1
 kind: Deployment
